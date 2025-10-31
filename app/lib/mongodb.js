@@ -11,10 +11,16 @@ if (!MONGODB_URI) {
  * in development. This prevents connections growing exponentially
  * during API Route usage.
  */
+
+// every time we change code in next js development mode , the server reloads and it can create many connections to mongodb unintentionally .
+
+
+
+
 let cached = global.mongoose;
 
 if (!cached) {
-  cached = global.mongoose = { conn: null, promise: null };
+  cached = global.mongoose = { conn: null, promise: null };  // conn : the actual connected Mongoose instance (once connected) || promise : the ongoing connection attempt (to avoid re-connecting while it’s already connecting)
 }
 
 export async function connectDB() {
@@ -24,7 +30,7 @@ export async function connectDB() {
 
   if (!cached.promise) {
     const opts = {
-      bufferCommands: false,
+      bufferCommands: false,  // disables mongoose’s automatic buffering of commands before the connection is ready (faster error reporting)
       serverSelectionTimeoutMS: 5000, // Keep trying to send operations for 5 seconds
       socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
       family: 4 // Use IPv4, skip trying IPv6
