@@ -91,7 +91,7 @@ const bookingSchema = new Schema(
 	{ timestamps: true }
 );
 
-// Prevent double booking: one booking per doctor per slot start (non-cancelled)
+// Prevent double booking: one booking per doctor per slot start (non-cancelled )
 bookingSchema.index({ doctor: 1, slotStart: 1 }, { unique: true });
 
 // Convenience virtuals
