@@ -1,0 +1,22 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="32" cy="32" r="30" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/>
+  <!-- Eye anatomy -->
+  <ellipse cx="32" cy="32" rx="14" ry="10" fill="white" stroke="#06b6d4" stroke-width="2"/>
+  <!-- Iris -->
+  <circle cx="32" cy="32" r="8" fill="#06b6d4" opacity="0.3"/>
+  <!-- Pupil -->
+  <circle cx="32" cy="32" r="4" fill="#06b6d4"/>
+  <!-- Light reflection -->
+  <circle cx="30" cy="30" r="1.5" fill="white"/>
+  <!-- Eyelids -->
+  <path d="M18 26c4-2 8-2 14-2s10 0 14 2" stroke="#06b6d4" stroke-width="2" fill="none"/>
+  <path d="M18 38c4 2 8 2 14 2s10 0 14-2" stroke="#06b6d4" stroke-width="2" fill="none"/>
+  <!-- Ophthalmoscope -->
+  <rect x="16" y="16" width="3" height="8" rx="1" fill="#06b6d4"/>
+  <circle cx="17.5" cy="18" r="1.5" fill="white"/>
+  <path d="M17.5 24l8 8" stroke="#06b6d4" stroke-width="2"/>
+  <!-- Vision chart letters -->
+  <text x="48" y="22" font-family="monospace" font-size="6" fill="#06b6d4">E</text>
+  <text x="48" y="28" font-family="monospace" font-size="4" fill="#06b6d4">F P</text>
+  <text x="48" y="32" font-family="monospace" font-size="3" fill="#06b6d4">T O Z</text>
+</svg>

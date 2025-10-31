@@ -1,0 +1,24 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="32" cy="32" r="30" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="2"/>
+  <!-- Left kidney -->
+  <path d="M22 20c-2 0-4 2-4 4v8c0 2 2 4 4 4 1 0 2-1 3-2 1-1 1-3 1-4v-4c0-1 0-3-1-4-1-1-2-2-3-2z" fill="#8b5cf6"/>
+  <!-- Right kidney -->
+  <path d="M42 20c2 0 4 2 4 4v8c0 2-2 4-4 4-1 0-2-1-3-2-1-1-1-3-1-4v-4c0-1 0-3 1-4 1-1 2-2 3-2z" fill="#8b5cf6"/>
+  <!-- Ureters -->
+  <path d="M25 36c0 4 0 8 4 12" stroke="#8b5cf6" stroke-width="2" fill="none"/>
+  <path d="M39 36c0 4 0 8-4 12" stroke="#8b5cf6" stroke-width="2" fill="none"/>
+  <!-- Bladder -->
+  <ellipse cx="32" cy="48" rx="6" ry="4" fill="#8b5cf6"/>
+  <!-- Urethra -->
+  <rect x="31" y="52" width="2" height="4" fill="#8b5cf6"/>
+  <!-- Kidney filtering units -->
+  <circle cx="22" cy="24" r="1" fill="white"/>
+  <circle cx="22" cy="28" r="1" fill="white"/>
+  <circle cx="42" cy="24" r="1" fill="white"/>
+  <circle cx="42" cy="28" r="1" fill="white"/>
+  <!-- Prostate (male anatomy) -->
+  <ellipse cx="32" cy="44" rx="3" ry="2" fill="#8b5cf6" opacity="0.6"/>
+  <!-- Medical scope -->
+  <path d="M16 16l4 4" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="14" cy="14" r="2" fill="#8b5cf6"/>
+</svg>

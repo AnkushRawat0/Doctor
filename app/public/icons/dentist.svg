@@ -1,0 +1,25 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="32" cy="32" r="30" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <!-- Upper jaw/teeth -->
+  <path d="M20 28c0-2 2-4 4-4h16c2 0 4 2 4 4v4h-24v-4z" fill="#f59e0b"/>
+  <!-- Lower jaw/teeth -->
+  <path d="M20 36h24v4c0 2-2 4-4 4H24c-2 0-4-2-4-4v-4z" fill="#f59e0b"/>
+  <!-- Individual teeth -->
+  <rect x="22" y="28" width="3" height="8" rx="1" fill="white"/>
+  <rect x="26" y="28" width="3" height="8" rx="1" fill="white"/>
+  <rect x="30" y="28" width="4" height="8" rx="1" fill="white"/>
+  <rect x="35" y="28" width="3" height="8" rx="1" fill="white"/>
+  <rect x="39" y="28" width="3" height="8" rx="1" fill="white"/>
+  <!-- Dental drill -->
+  <path d="M16 16l8 8" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="14" cy="14" r="2" fill="#f59e0b"/>
+  <rect x="12" y="12" width="4" height="1" fill="#f59e0b"/>
+  <!-- Dental mirror -->
+  <circle cx="48" cy="18" r="4" fill="#f59e0b" opacity="0.3"/>
+  <path d="M44 22l-4 4" stroke="#f59e0b" stroke-width="2"/>
+  <!-- Tooth with cavity -->
+  <path d="M46 38c0-2 2-4 4-4s4 2 4 4v6c0 2-2 4-4 4s-4-2-4-4v-6z" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="50" cy="42" r="1" fill="#dc2626"/>
+  <!-- Dental floss -->
+  <path d="M18 44c2-1 4-1 6 0 2-1 4-1 6 0" stroke="#f59e0b" stroke-width="1" fill="none"/>
+</svg>

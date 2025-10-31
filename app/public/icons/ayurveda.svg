@@ -1,0 +1,23 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="32" cy="32" r="30" fill="#f7fee7" stroke="#84cc16" stroke-width="2"/>
+  <!-- Om symbol simplified -->
+  <path d="M26 20c-2 0-4 2-4 4 0 1 0 2 1 3 1 1 2 1 3 1h6c1 0 2 0 3-1 1-1 1-2 1-3 0-2-2-4-4-4h-6z" fill="#84cc16"/>
+  <path d="M28 28c0 2 2 4 4 4s4-2 4-4" stroke="#84cc16" stroke-width="2" fill="none"/>
+  <circle cx="36" cy="22" r="2" fill="#84cc16"/>
+  <!-- Medicinal herbs/leaves -->
+  <path d="M20 30c0-4 2-6 4-6 2 0 4 2 4 6s-2 6-4 6-4-2-4-6z" fill="#84cc16" opacity="0.7"/>
+  <path d="M22 24l2 12" stroke="white" stroke-width="1"/>
+  <path d="M40 30c0-4 2-6 4-6 2 0 4 2 4 6s-2 6-4 6-4-2-4-6z" fill="#84cc16" opacity="0.7"/>
+  <path d="M42 24l2 12" stroke="white" stroke-width="1"/>
+  <!-- Mortar and pestle -->
+  <ellipse cx="32" cy="44" rx="8" ry="4" fill="#84cc16" opacity="0.6"/>
+  <circle cx="32" cy="40" r="6" fill="#84cc16" opacity="0.4"/>
+  <path d="M38 38l4-4" stroke="#84cc16" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="42" cy="34" r="2" fill="#84cc16"/>
+  <!-- Ayurvedic symbols (tridosha) -->
+  <circle cx="18" cy="18" r="2" fill="#84cc16" opacity="0.6"/>
+  <circle cx="46" cy="18" r="2" fill="#84cc16" opacity="0.6"/>
+  <circle cx="32" cy="12" r="2" fill="#84cc16" opacity="0.6"/>
+  <!-- Sacred geometry -->
+  <path d="M18 18l14 6M46 18l-14 6M32 12v12" stroke="#84cc16" stroke-width="1" opacity="0.5"/>
+</svg>

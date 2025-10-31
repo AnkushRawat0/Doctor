@@ -1,0 +1,13 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="32" cy="32" r="30" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <!-- Anatomical heart shape -->
+  <path d="M32 45c-1-1-8-8-8-16 0-4 3-7 7-7 2 0 3 1 4 2 1-1 2-2 4-2 4 0 7 3 7 7 0 8-7 15-8 16h-6z" fill="#dc2626"/>
+  <!-- Heart chambers -->
+  <path d="M28 28c0-2 2-4 4-4s4 2 4 4v8c0 2-2 4-4 4s-4-2-4-4v-8z" fill="white" opacity="0.3"/>
+  <!-- Aorta -->
+  <path d="M32 22v-4" stroke="#dc2626" stroke-width="3" stroke-linecap="round"/>
+  <!-- Pulmonary vessels -->
+  <path d="M28 24l-4-2M36 24l4-2" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
+  <!-- EKG line -->
+  <path d="M16 52l2-4 2 8 2-12 2 4 2 0 2-2 2 6 2-4 2 2" stroke="#dc2626" stroke-width="2" fill="none"/>
+</svg>

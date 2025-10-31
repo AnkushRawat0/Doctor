@@ -1,0 +1,21 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="32" cy="32" r="30" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <!-- Brain outline -->
+  <path d="M20 24c0-4 4-8 12-8s12 4 12 8c0 2-1 4-2 6v8c0 4-4 8-10 8s-10-4-10-8v-8c-1-2-2-4-2-6z" fill="#6366f1"/>
+  <!-- Brain hemispheres -->
+  <path d="M32 16v32" stroke="white" stroke-width="2"/>
+  <!-- Brain folds/gyri -->
+  <path d="M24 22c2-1 4-1 6 0 2-1 4-1 6 0" stroke="white" stroke-width="1.5" fill="none"/>
+  <path d="M24 28c2-1 4-1 6 0 2-1 4-1 6 0" stroke="white" stroke-width="1.5" fill="none"/>
+  <path d="M24 34c2-1 4-1 6 0 2-1 4-1 6 0" stroke="white" stroke-width="1.5" fill="none"/>
+  <!-- Neurons/synapses -->
+  <circle cx="26" cy="26" r="1.5" fill="white"/>
+  <circle cx="38" cy="26" r="1.5" fill="white"/>
+  <circle cx="28" cy="32" r="1.5" fill="white"/>
+  <circle cx="36" cy="32" r="1.5" fill="white"/>
+  <!-- Neural connections -->
+  <path d="M26 26l2 6M38 26l-2 6" stroke="white" stroke-width="1" opacity="0.7"/>
+  <!-- Reflex hammer -->
+  <path d="M44 40l4 6" stroke="#6366f1" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="46" cy="38" r="2" fill="#6366f1"/>
+</svg>

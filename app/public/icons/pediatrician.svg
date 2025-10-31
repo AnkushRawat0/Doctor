@@ -1,0 +1,25 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="32" cy="32" r="30" fill="#f0fdfa" stroke="#14b8a6" stroke-width="2"/>
+  <!-- Child's head -->
+  <circle cx="32" cy="26" r="8" fill="#14b8a6" opacity="0.7"/>
+  <!-- Child's body -->
+  <rect x="26" y="34" width="12" height="14" rx="6" fill="#14b8a6"/>
+  <!-- Child's face -->
+  <circle cx="29" cy="23" r="1.5" fill="white"/>
+  <circle cx="35" cy="23" r="1.5" fill="white"/>
+  <path d="M30 28c0 1 1 2 2 2s2-1 2-2" stroke="white" stroke-width="1.5" fill="none"/>
+  <!-- Stethoscope -->
+  <circle cx="20" cy="20" r="4" fill="#14b8a6"/>
+  <circle cx="20" cy="20" r="2" fill="white"/>
+  <path d="M24 20c4 0 8 4 8 8" stroke="#14b8a6" stroke-width="2" fill="none"/>
+  <path d="M32 28c4 0 6 2 6 4" stroke="#14b8a6" stroke-width="2" fill="none"/>
+  <!-- Pediatric growth chart -->
+  <rect x="44" y="18" width="6" height="10" fill="#14b8a6" opacity="0.3"/>
+  <path d="M46 26l2-4 2 2" stroke="#14b8a6" stroke-width="1" fill="none"/>
+  <!-- Toy blocks -->
+  <rect x="18" y="44" width="4" height="4" fill="#14b8a6" opacity="0.6"/>
+  <rect x="22" y="40" width="4" height="4" fill="#14b8a6" opacity="0.8"/>
+  <!-- Vaccine syringe -->
+  <rect x="42" y="38" width="2" height="8" fill="#14b8a6"/>
+  <circle cx="43" cy="36" r="1" fill="#14b8a6"/>
+</svg>
