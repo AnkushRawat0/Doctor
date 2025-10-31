@@ -186,7 +186,7 @@ const patientSchema = new mongoose.Schema({
   timestamps: true
 });
 
-// Indexes for better performance
+// Indexes for better performance and optimization
 patientSchema.index({ email: 1 });
 patientSchema.index({ phone: 1 });
 patientSchema.index({ location: 1 });
