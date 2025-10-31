@@ -40,7 +40,7 @@ const blogSchema = new mongoose.Schema({
   }
   
 }, {
-  timestamps: true // Adds createdAt and updatedAt automatically
+  timestamps: true //  Adds createdAt and updatedAt automatically
 });
 
 // Index for search functionality
