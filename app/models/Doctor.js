@@ -350,7 +350,7 @@ const doctorSchema = new mongoose.Schema({
   slug: {
     type: String,
     unique: true,
-    sparse: true,
+    sparse: true, //mongodb ingnores doc that dont have a slug when enforcing uniqueness
     index: true
   }
 }, {
