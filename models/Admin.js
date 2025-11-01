@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 
-const adminSchmea = new mongoose.Schema({
+const adminSchema = new mongoose.Schema({
     //Baisc Info
     firstName : {
         type : String,
