@@ -69,7 +69,7 @@ export async function GET(request) {
     // Build query object
     const query = {};
 
-    // Add search functionality
+    // Add search  functionality
     if (search) {
       query.$or = [
         { firstName: { $regex: search, $options: "i" } },
