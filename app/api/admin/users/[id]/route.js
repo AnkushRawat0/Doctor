@@ -1,15 +1,16 @@
 import { NextResponse } from 'next/server';
 import { connectDB } from '../../../../../lib/mongodb';
-import Doctor from '../../../../../models/Doctor';
+import Patient from '../../../../../models/Patient';
 import Admin from '../../../../../models/Admin';
 import jwt from 'jsonwebtoken';
 
-export async function PATCH(request, { params }) {
+// PUT method to update patient suspension status
+export async function PUT(request, { params }) {
   try {
     await connectDB();
     
     const { id } = params;
-    const { queryType, value, reason } = await request.json();
+    const { isSuspended, suspensionReason } = await request.json();
     
     // Get token from headers
     const authHeader = request.headers.get('authorization');
@@ -27,21 +28,14 @@ export async function PATCH(request, { params }) {
     
     if (!id) {
       return NextResponse.json(
-        { error: 'Doctor ID is required' },
+        { error: 'Patient ID is required' },
         { status: 400 }
       );
     }
     
-    if (!queryType || (value !== true && value !== false)) {
+    if (typeof isSuspended !== 'boolean') {
       return NextResponse.json(
-        { error: 'Query type and boolean value are required' },
-        { status: 400 }
-      );
-    }
-    
-    if (!['approval', 'suspension'].includes(queryType)) {
-      return NextResponse.json(
-        { error: 'Query type must be either "approval" or "suspension"' },
+        { error: 'isSuspended must be a boolean value' },
         { status: 400 }
       );
     }
@@ -83,83 +77,64 @@ export async function PATCH(request, { params }) {
       );
     }
     
-    // Find the doctor
-    const doctor = await Doctor.findById(id);
+    // Find the patient
+    const patient = await Patient.findById(id);
     
-    if (!doctor) {
+    if (!patient) {
       return NextResponse.json(
-        { error: 'Doctor not found' },
+        { error: 'Patient not found' },
         { status: 404 }
       );
     }
     
-    // Prepare update object based on query type
-    let updateObject = {};
-    let actionMessage = '';
+    // Prepare update object
+    const updateObject = {
+      isSuspended: isSuspended
+    };
     
-    if (queryType === 'approval') {
-      updateObject.isAdminVerified = value;
-      actionMessage = value ? 'approved' : 'disapproved';
-      
-      // If disapproving, you might want to deactivate the doctor
-      if (!value) {
-        updateObject.isActive = false;
-      } else {
-        // If approving, activate the doctor (unless suspended)
-        if (!doctor.isSuspended) {
-          updateObject.isActive = true;
-        }
-      }
-    } else if (queryType === 'suspension') {
-      updateObject.isSuspended = value;
-      actionMessage = value ? 'suspended' : 'unsuspended';
-      
+    // Handle suspension logic
+    if (isSuspended) {
       // If suspending, add reason and deactivate
-      if (value) {
-        if (reason) {
-          updateObject.suspensionReason = reason;
-        }
-        updateObject.isActive = false;
-      } else {
-        // If unsuspending, clear reason and activate (if approved)
-        updateObject.suspensionReason = '';
-        if (doctor.isAdminVerified) {
-          updateObject.isActive = true;
-        }
-      }
+      updateObject.suspensionReason = suspensionReason || 'No reason provided';
+      updateObject.isActive = false;
+    } else {
+      // If unsuspending, clear reason and activate
+      updateObject.suspensionReason = '';
+      updateObject.isActive = true;
     }
     
-    // Update the doctor
-    const updatedDoctor = await Doctor.findByIdAndUpdate(
+    // Update the patient
+    const updatedPatient = await Patient.findByIdAndUpdate(
       id,
       { $set: updateObject },
       { new: true, runValidators: true }
-    ).select('-password'); // Exclude password from response
+    ).select('-password -otpCode'); // Exclude sensitive fields
     
-    // Log the admin action (you might want to create an audit log)
-    console.log(`Admin ${admin.email} ${actionMessage} doctor ${doctor.email} (ID: ${id})`);
+    const actionMessage = isSuspended ? 'suspended' : 'unsuspended';
+    
+    // Log the admin action
+    console.log(`Admin ${admin.email} ${actionMessage} patient ${patient.email} (ID: ${id})`);
     
     return NextResponse.json({
       success: true,
-      message: `Doctor ${actionMessage} successfully`,
+      message: `Patient ${actionMessage} successfully`,
       data: {
-        doctor: {
-          id: updatedDoctor._id,
-          firstName: updatedDoctor.firstName,
-          lastName: updatedDoctor.lastName,
-          email: updatedDoctor.email,
-          specialization: updatedDoctor.specialization,
-          isAdminVerified: updatedDoctor.isAdminVerified,
-          isSuspended: updatedDoctor.isSuspended,
-          suspensionReason: updatedDoctor.suspensionReason,
-          isActive: updatedDoctor.isActive,
-          isEmailVerified: updatedDoctor.isEmailVerified,
-          isPhoneVerified: updatedDoctor.isPhoneVerified
+        patient: {
+          id: updatedPatient._id,
+          firstName: updatedPatient.firstName,
+          lastName: updatedPatient.lastName,
+          email: updatedPatient.email,
+          phone: updatedPatient.phone,
+          isSuspended: updatedPatient.isSuspended,
+          suspensionReason: updatedPatient.suspensionReason,
+          isActive: updatedPatient.isActive,
+          isEmailVerified: updatedPatient.isEmailVerified,
+          isPhoneVerified: updatedPatient.isPhoneVerified
         },
         action: {
-          type: queryType,
-          value: value,
-          reason: reason || null,
+          type: 'suspension',
+          value: isSuspended,
+          reason: suspensionReason || null,
           performedBy: {
             adminId: admin._id,
             adminEmail: admin.email,
@@ -171,15 +146,15 @@ export async function PATCH(request, { params }) {
     });
     
   } catch (error) {
-    console.error('Doctor status update error:', error);
+    console.error('Patient suspension update error:', error);
     return NextResponse.json(
-      { error: 'Failed to update doctor status. Please try again.' },
+      { error: 'Failed to update patient suspension status. Please try again.' },
       { status: 500 }
     );
   }
 }
 
-// GET method to fetch specific doctor details for admin
+// GET method to fetch patient details by ID
 export async function GET(request, { params }) {
   try {
     await connectDB();
@@ -202,7 +177,7 @@ export async function GET(request, { params }) {
     
     if (!id) {
       return NextResponse.json(
-        { error: 'Doctor ID is required' },
+        { error: 'Patient ID is required' },
         { status: 400 }
       );
     }
@@ -236,34 +211,34 @@ export async function GET(request, { params }) {
       );
     }
     
-    // Find the doctor
-    const doctor = await Doctor.findById(id).select('-password');
+    // Find the patient
+    const patient = await Patient.findById(id).select('-password -otpCode');
     
-    if (!doctor) {
+    if (!patient) {
       return NextResponse.json(
-        { error: 'Doctor not found' },
+        { error: 'Patient not found' },
         { status: 404 }
       );
     }
     
     return NextResponse.json({
       success: true,
-      message: 'Doctor details fetched successfully',
+      message: 'Patient details fetched successfully',
       data: {
-        doctor
+        patient
       }
     });
     
   } catch (error) {
-    console.error('Fetch doctor error:', error);
+    console.error('Fetch patient error:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch doctor details. Please try again.' },
+      { error: 'Failed to fetch patient details. Please try again.' },
       { status: 500 }
     );
   }
 }
 
-// DELETE method to delete a doctor
+// DELETE method to delete a patient
 export async function DELETE(request, { params }) {
   try {
     await connectDB();
@@ -286,7 +261,7 @@ export async function DELETE(request, { params }) {
     
     if (!id) {
       return NextResponse.json(
-        { error: 'Doctor ID is required' },
+        { error: 'Patient ID is required' },
         { status: 400 }
       );
     }
@@ -320,31 +295,31 @@ export async function DELETE(request, { params }) {
       );
     }
     
-    // Find the doctor
-    const doctor = await Doctor.findById(id);
+    // Find the patient
+    const patient = await Patient.findById(id);
     
-    if (!doctor) {
+    if (!patient) {
       return NextResponse.json(
-        { error: 'Doctor not found' },
+        { error: 'Patient not found' },
         { status: 404 }
       );
     }
     
-    // Delete the doctor
-    await Doctor.findByIdAndDelete(id);
+    // Delete the patient
+    await Patient.findByIdAndDelete(id);
     
     // Log the admin action
-    console.log(`Admin ${admin.email} deleted doctor ${doctor.email} (ID: ${id})`);
+    console.log(`Admin ${admin.email} deleted patient ${patient.email} (ID: ${id})`);
     
     return NextResponse.json({
       success: true,
-      message: 'Doctor deleted successfully',
+      message: 'Patient deleted successfully',
       data: {
-        deletedDoctor: {
-          id: doctor._id,
-          firstName: doctor.firstName,
-          lastName: doctor.lastName,
-          email: doctor.email
+        deletedPatient: {
+          id: patient._id,
+          firstName: patient.firstName,
+          lastName: patient.lastName,
+          email: patient.email
         },
         action: {
           type: 'delete',
@@ -359,9 +334,9 @@ export async function DELETE(request, { params }) {
     });
     
   } catch (error) {
-    console.error('Delete doctor error:', error);
+    console.error('Delete patient error:', error);
     return NextResponse.json(
-      { error: 'Failed to delete doctor. Please try again.' },
+      { error: 'Failed to delete patient. Please try again.' },
       { status: 500 }
     );
   }

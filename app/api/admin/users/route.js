@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { connectDB } from '../../../../lib/mongodb';
-import Doctor from '../../../../models/Doctor';
+import Patient from '../../../../models/Patient';
 import Admin from '../../../../models/Admin';
 import jwt from 'jsonwebtoken';
 
@@ -59,84 +59,46 @@ export async function GET(request) {
       );
     }
     
-    // Get query parameters for pagination and filtering
+    // Get pagination parameters
     const url = new URL(request.url);
     const page = parseInt(url.searchParams.get('page')) || 1;
     const limit = parseInt(url.searchParams.get('limit')) || 10;
-    const search = url.searchParams.get('search') || '';
-    const specialization = url.searchParams.get('specialization') || '';
-    const isActive = url.searchParams.get('isActive');
-    const isVerified = url.searchParams.get('isVerified');
-    
-    // Build query object
-    const query = {};
-    
-    // Add search functionality
-    if (search) {
-      query.$or = [
-        { firstName: { $regex: search, $options: 'i' } },
-        { lastName: { $regex: search, $options: 'i' } },
-        { email: { $regex: search, $options: 'i' } },
-        { specialization: { $regex: search, $options: 'i' } }
-      ];
-    }
-    
-    // Add specialization filter
-    if (specialization) {
-      query.specialization = { $regex: specialization, $options: 'i' };
-    }
-    
-    // Add active status filter
-    if (isActive !== null && isActive !== undefined) {
-      query.isActive = isActive === 'true';
-    }
-    
-    // Add verification status filter
-    if (isVerified !== null && isVerified !== undefined) {
-      query.isEmailVerified = isVerified === 'true';
-    }
     
     // Calculate skip value for pagination
     const skip = (page - 1) * limit;
     
-    // Fetch doctors with pagination
-    const doctors = await Doctor.find(query)
-      .select('-password') // Exclude password field
+    // Fetch patients with pagination
+    const patients = await Patient.find({})
+      .select('-password -otpCode') // Exclude sensitive fields
       .sort({ createdAt: -1 })
       .skip(skip)
       .limit(limit);
     
     // Get total count for pagination
-    const totalDoctors = await Doctor.countDocuments(query);
-    const totalPages = Math.ceil(totalDoctors / limit);
+    const totalPatients = await Patient.countDocuments({});
+    const totalPages = Math.ceil(totalPatients / limit);
     
-    // Return doctors data
+    // Return patients data
     return NextResponse.json({
       success: true,
-      message: 'Doctors fetched successfully',
+      message: 'Patients fetched successfully',
       data: {
-        doctors,
+        patients,
         pagination: {
           currentPage: page,
           totalPages,
-          totalDoctors,
+          totalPatients,
           limit,
           hasNextPage: page < totalPages,
           hasPrevPage: page > 1
-        },
-        filters: {
-          search,
-          specialization,
-          isActive,
-          isVerified
         }
       }
     });
     
   } catch (error) {
-    console.error('Fetch doctors error:', error);
+    console.error('Fetch patients error:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch doctors. Please try again.' },
+      { error: 'Failed to fetch patients. Please try again.' },
       { status: 500 }
     );
   }
