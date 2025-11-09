@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -613,7 +613,7 @@ export default function DoctorOnboardingPage() {
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${errors.firstName ? 'border-red-500' : 'border-gray-300'}`}
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${errors.firstName ? 'border-red-500' : 'border-gray-300'}`}
                   placeholder="Enter your first name"
                 />
                 {errors.firstName && <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>}
@@ -626,7 +626,7 @@ export default function DoctorOnboardingPage() {
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${errors.lastName ? 'border-red-500' : 'border-gray-300'}`}
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${errors.lastName ? 'border-red-500' : 'border-gray-300'}`}
                   placeholder="Enter your last name"
                 />
                 {errors.lastName && <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>}
@@ -640,7 +640,7 @@ export default function DoctorOnboardingPage() {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${errors.email ? 'border-red-500' : 'border-gray-300'}`}
+                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${errors.email ? 'border-red-500' : 'border-gray-300'}`}
                 placeholder="Enter your email address"
               />
               {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
@@ -653,7 +653,7 @@ export default function DoctorOnboardingPage() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${errors.phone ? 'border-red-500' : 'border-gray-300'}`}
+                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${errors.phone ? 'border-red-500' : 'border-gray-300'}`}
                 placeholder="Enter your phone number"
               />
               {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
@@ -667,7 +667,7 @@ export default function DoctorOnboardingPage() {
                   name="password"
                   value={formData.password}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${errors.password ? 'border-red-500' : 'border-gray-300'}`}
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${errors.password ? 'border-red-500' : 'border-gray-300'}`}
                   placeholder="Create a password"
                 />
                 {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
@@ -680,7 +680,7 @@ export default function DoctorOnboardingPage() {
                   name="confirmPassword"
                   value={formData.confirmPassword}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${errors.confirmPassword ? 'border-red-500' : 'border-gray-300'}`}
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${errors.confirmPassword ? 'border-red-500' : 'border-gray-300'}`}
                   placeholder="Confirm your password"
                 />
                 {errors.confirmPassword && <p className="text-red-500 text-sm mt-1">{errors.confirmPassword}</p>}
@@ -704,7 +704,7 @@ export default function DoctorOnboardingPage() {
                  name="otp"
                  value={formData.otp}
                  onChange={handleInputChange}
-                 className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] text-center text-lg tracking-widest ${errors.otp ? 'border-red-500' : 'border-gray-300'}`}
+                 className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] text-center text-lg tracking-widest ${errors.otp ? 'border-red-500' : 'border-gray-300'}`}
                  placeholder="0000"
                  maxLength="4"
                />
@@ -716,7 +716,7 @@ export default function DoctorOnboardingPage() {
                  type="button"
                  onClick={resendOTP}
                  disabled={otpLoading}
-                 className="text-[#5f4191] hover:text-[#4d3374] font-medium text-sm disabled:opacity-50"
+                 className="text-[#10B981] hover:text-[#059669] font-medium text-sm disabled:opacity-50"
                >
                  {otpLoading ? 'Sending...' : 'Resend OTP'}
                </button>
@@ -736,7 +736,7 @@ export default function DoctorOnboardingPage() {
                   name="specialization"
                   value={formData.specialization}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${errors.specialization ? 'border-red-500' : 'border-gray-300'}`}
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${errors.specialization ? 'border-red-500' : 'border-gray-300'}`}
                 >
                   <option value="">Select your specialization</option>
                   {Specialization.map((spec) => (
@@ -755,7 +755,7 @@ export default function DoctorOnboardingPage() {
                   name="qualification"
                   value={formData.qualification}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${errors.qualification ? 'border-red-500' : 'border-gray-300'}`}
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${errors.qualification ? 'border-red-500' : 'border-gray-300'}`}
                   placeholder="e.g., MBBS, MD"
                 />
                 {errors.qualification && <p className="text-red-500 text-sm mt-1">{errors.qualification}</p>}
@@ -769,7 +769,7 @@ export default function DoctorOnboardingPage() {
                 name="experience"
                 value={formData.experience}
                 onChange={handleInputChange}
-                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${errors.experience ? 'border-red-500' : 'border-gray-300'}`}
+                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${errors.experience ? 'border-red-500' : 'border-gray-300'}`}
                 placeholder="Years of experience"
                 min="0"
               />
@@ -783,7 +783,7 @@ export default function DoctorOnboardingPage() {
                 <button
                   type="button"
                   onClick={addAward}
-                  className="px-3 py-1 bg-[#5f4191] text-white rounded text-sm hover:bg-[#4d3374]"
+                  className="px-3 py-1 bg-[#10B981] text-white rounded text-sm hover:bg-[#059669]"
                 >
                   Add Award
                 </button>
@@ -806,27 +806,27 @@ export default function DoctorOnboardingPage() {
                       placeholder="Award Title"
                       value={award.title}
                       onChange={(e) => updateAward(index, 'title', e.target.value)}
-                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5f4191]"
+                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#10B981]"
                     />
                     <input
                       type="number"
                       placeholder="Year"
                       value={award.year}
                       onChange={(e) => updateAward(index, 'year', parseInt(e.target.value))}
-                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5f4191]"
+                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#10B981]"
                     />
                     <input
                       type="text"
                       placeholder="Organization"
                       value={award.organization}
                       onChange={(e) => updateAward(index, 'organization', e.target.value)}
-                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5f4191] md:col-span-2"
+                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#10B981] md:col-span-2"
                     />
                     <textarea
                       placeholder="Description (optional)"
                       value={award.description}
                       onChange={(e) => updateAward(index, 'description', e.target.value)}
-                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5f4191] md:col-span-2"
+                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#10B981] md:col-span-2"
                       rows="2"
                     />
                   </div>
@@ -841,7 +841,7 @@ export default function DoctorOnboardingPage() {
                 <button
                   type="button"
                   onClick={addExperience}
-                  className="px-3 py-1 bg-[#5f4191] text-white rounded text-sm hover:bg-[#4d3374]"
+                  className="px-3 py-1 bg-[#10B981] text-white rounded text-sm hover:bg-[#059669]"
                 >
                   Add Experience
                 </button>
@@ -864,28 +864,28 @@ export default function DoctorOnboardingPage() {
                       placeholder="Position"
                       value={exp.position}
                       onChange={(e) => updateExperience(index, 'position', e.target.value)}
-                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5f4191]"
+                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#10B981]"
                     />
                     <input
                       type="text"
                       placeholder="Organization"
                       value={exp.organization}
                       onChange={(e) => updateExperience(index, 'organization', e.target.value)}
-                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5f4191]"
+                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#10B981]"
                     />
                     <input
                       type="date"
                       placeholder="Start Date"
                       value={exp.startDate}
                       onChange={(e) => updateExperience(index, 'startDate', e.target.value)}
-                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5f4191]"
+                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#10B981]"
                     />
                     <input
                       type="date"
                       placeholder="End Date"
                       value={exp.endDate}
                       onChange={(e) => updateExperience(index, 'endDate', e.target.value)}
-                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5f4191]"
+                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#10B981]"
                       disabled={exp.current}
                     />
                     <label className="flex items-center md:col-span-2">
@@ -901,7 +901,7 @@ export default function DoctorOnboardingPage() {
                       placeholder="Description (optional)"
                       value={exp.description}
                       onChange={(e) => updateExperience(index, 'description', e.target.value)}
-                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5f4191] md:col-span-2"
+                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#10B981] md:col-span-2"
                       rows="2"
                     />
                   </div>
@@ -923,7 +923,7 @@ export default function DoctorOnboardingPage() {
                 name="clinicName"
                 value={formData.clinicName}
                 onChange={handleInputChange}
-                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${errors.clinicName ? 'border-red-500' : 'border-gray-300'}`}
+                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${errors.clinicName ? 'border-red-500' : 'border-gray-300'}`}
                 placeholder="Enter clinic name"
               />
               {errors.clinicName && <p className="text-red-500 text-sm mt-1">{errors.clinicName}</p>}
@@ -937,7 +937,7 @@ export default function DoctorOnboardingPage() {
                   name="clinicAddress"
                   value={formData.clinicAddress}
                   onChange={handleInputChange}
-                  className={`flex-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${errors.clinicAddress ? 'border-red-500' : 'border-gray-300'}`}
+                  className={`flex-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${errors.clinicAddress ? 'border-red-500' : 'border-gray-300'}`}
                   placeholder="Enter clinic address"
                 />
                 <button
@@ -965,7 +965,7 @@ export default function DoctorOnboardingPage() {
                 <button
                   type="button"
                   onClick={() => setShowLocationPicker(true)}
-                  className="px-4 py-2 bg-[#5f4191] text-white rounded-lg hover:bg-[#4d3374] flex items-center gap-1"
+                  className="px-4 py-2 bg-[#10B981] text-white rounded-lg hover:bg-[#059669] flex items-center gap-1"
                   title="Pick location on map"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1016,7 +1016,7 @@ export default function DoctorOnboardingPage() {
                   name="consultationFee"
                   value={formData.consultationFee}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${errors.consultationFee ? 'border-red-500' : 'border-gray-300'}`}
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${errors.consultationFee ? 'border-red-500' : 'border-gray-300'}`}
                   placeholder="Enter consultation fee"
                   min="0"
                 />
@@ -1030,7 +1030,7 @@ export default function DoctorOnboardingPage() {
                   name="location"
                   value={formData.location}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${errors.location ? 'border-red-500' : 'border-gray-300'}`}
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${errors.location ? 'border-red-500' : 'border-gray-300'}`}
                   placeholder="City/Location"
                 />
                 {errors.location && <p className="text-red-500 text-sm mt-1">{errors.location}</p>}
@@ -1044,7 +1044,7 @@ export default function DoctorOnboardingPage() {
                 <button
                   type="button"
                   onClick={addService}
-                  className="px-3 py-1 bg-[#5f4191] text-white rounded text-sm hover:bg-[#4d3374]"
+                  className="px-3 py-1 bg-[#10B981] text-white rounded text-sm hover:bg-[#059669]"
                 >
                   Add Service
                 </button>
@@ -1067,27 +1067,27 @@ export default function DoctorOnboardingPage() {
                       placeholder="Service Name"
                       value={service.name}
                       onChange={(e) => updateService(index, 'name', e.target.value)}
-                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5f4191] md:col-span-2"
+                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#10B981] md:col-span-2"
                     />
                     <input
                       type="number"
                       placeholder="Price"
                       value={service.price}
                       onChange={(e) => updateService(index, 'price', e.target.value)}
-                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5f4191]"
+                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#10B981]"
                     />
                     <input
                       type="number"
                       placeholder="Duration (minutes)"
                       value={service.duration}
                       onChange={(e) => updateService(index, 'duration', e.target.value)}
-                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5f4191]"
+                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#10B981]"
                     />
                     <textarea
                       placeholder="Description (optional)"
                       value={service.description}
                       onChange={(e) => updateService(index, 'description', e.target.value)}
-                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5f4191] md:col-span-2"
+                      className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#10B981] md:col-span-2"
                       rows="2"
                     />
                   </div>
@@ -1127,7 +1127,7 @@ export default function DoctorOnboardingPage() {
                           <select
                             value={slot.startTime}
                             onChange={(e) => updateTimeSlot(day, slotIndex, 'startTime', e.target.value)}
-                            className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5f4191]"
+                            className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#10B981]"
                           >
                             {timeOptions.map(time => (
                               <option key={time} value={time}>{time}</option>
@@ -1137,7 +1137,7 @@ export default function DoctorOnboardingPage() {
                           <select
                             value={slot.endTime}
                             onChange={(e) => updateTimeSlot(day, slotIndex, 'endTime', e.target.value)}
-                            className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5f4191]"
+                            className="px-3 py-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#10B981]"
                           >
                             {timeOptions.map(time => (
                               <option key={time} value={time}>{time}</option>
@@ -1157,7 +1157,7 @@ export default function DoctorOnboardingPage() {
                       <button
                         type="button"
                         onClick={() => addTimeSlot(day)}
-                        className="text-[#5f4191] hover:text-[#4d3374] text-sm"
+                        className="text-[#10B981] hover:text-[#059669] text-sm"
                       >
                         + Add Time Slot
                       </button>
@@ -1178,7 +1178,7 @@ export default function DoctorOnboardingPage() {
                   name="dateOfBirth"
                   value={formData.dateOfBirth}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${errors.dateOfBirth ? 'border-red-500' : 'border-gray-300'}`}
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${errors.dateOfBirth ? 'border-red-500' : 'border-gray-300'}`}
                 />
                 {errors.dateOfBirth && <p className="text-red-500 text-sm mt-1">{errors.dateOfBirth}</p>}
               </div>
@@ -1189,7 +1189,7 @@ export default function DoctorOnboardingPage() {
                   name="gender"
                   value={formData.gender}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${errors.gender ? 'border-red-500' : 'border-gray-300'}`}
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${errors.gender ? 'border-red-500' : 'border-gray-300'}`}
                 >
                   <option value="">Select Gender</option>
                   <option value="male">Male</option>
@@ -1206,7 +1206,7 @@ export default function DoctorOnboardingPage() {
                 name="bio"
                 value={formData.bio}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] border-gray-300"
+                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] border-gray-300"
                 placeholder="Tell us about yourself..."
                 rows="4"
               />
@@ -1223,11 +1223,11 @@ export default function DoctorOnboardingPage() {
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100 flex items-center justify-center p-4">
       <div className="max-w-2xl w-full bg-white rounded-lg shadow-xl overflow-hidden">
         {/* Header */}
-        <div className="bg-[#5f4191] text-white p-6">
+        <div className="bg-[#10B981] text-white p-6">
           <div className="flex items-center justify-center mb-4">
             <Image
               src="/icons/logo.png"
-              alt="Doctar Logo"
+              alt="DOCONLINE Logo"
               width={120}
               height={40}
               className="object-contain"
@@ -1246,7 +1246,7 @@ export default function DoctorOnboardingPage() {
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
                     step <= currentStep
-                      ? 'bg-[#5f4191] text-white'
+                      ? 'bg-[#10B981] text-white'
                       : 'bg-gray-200 text-gray-600'
                   }`}
                 >
@@ -1255,7 +1255,7 @@ export default function DoctorOnboardingPage() {
                 {step < 5 && (
                   <div
                     className={`flex-1 h-1 mx-2 ${
-                      step < currentStep ? 'bg-[#5f4191]' : 'bg-gray-200'
+                      step < currentStep ? 'bg-[#10B981]' : 'bg-gray-200'
                     }`}
                   />
                 )}
@@ -1303,7 +1303,7 @@ export default function DoctorOnboardingPage() {
               type="button"
               onClick={handleNext}
               disabled={isLoading || otpLoading}
-              className="px-6 py-2 bg-[#5f4191] text-white rounded-lg hover:bg-[#4d3374] disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-6 py-2 bg-[#10B981] text-white rounded-lg hover:bg-[#059669] disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? (
                 <span className="flex items-center">
@@ -1381,7 +1381,7 @@ export default function DoctorOnboardingPage() {
                   <button
                     type="button"
                     onClick={() => setShowLocationPicker(false)}
-                    className="flex-1 px-4 py-2 bg-[#5f4191] text-white rounded-lg hover:bg-[#4d3374] transition-colors"
+                    className="flex-1 px-4 py-2 bg-[#10B981] text-white rounded-lg hover:bg-[#059669] transition-colors"
                   >
                     ✓ Confirm Location
                   </button>
