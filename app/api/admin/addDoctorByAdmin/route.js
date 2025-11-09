@@ -36,7 +36,7 @@ export async function POST(request) {
     // Verify JWT token
     let decoded;
     try {
-      decoded = jwt.verify(token, process.env.JWT_SECRET || 'doctar_jwt_secret_key_2025');
+      decoded = jwt.verify(token, process.env.JWT_SECRET || 'DOCONLINE_jwt_secret_key_2025');
     } catch (error) {
       return NextResponse.json(
         { error: 'Invalid or expired token' },

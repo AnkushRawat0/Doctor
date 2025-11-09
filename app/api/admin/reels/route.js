@@ -16,7 +16,7 @@ async function verifyAdmin(request) {
       return { error: 'Authentication token is required', status: 401 };
     }
     
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'doctar_jwt_secret_key_2025');
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'DOCONLINE_jwt_secret_key_2025');
     
     if (decoded.role !== 'admin') {
       return { error: 'Access denied. Admin privileges required.', status: 403 };

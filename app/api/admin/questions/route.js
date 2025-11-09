@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken';
 
 const verifyToken = (token) => {
   try {
-    return jwt.verify(token, process.env.JWT_SECRET || 'doctar_jwt_secret_key_2025');
+    return jwt.verify(token, process.env.JWT_SECRET || 'DOCONLINE_jwt_secret_key_2025');
   } catch {
     return null;
   }
