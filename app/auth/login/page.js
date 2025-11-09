@@ -88,7 +88,7 @@ export default function LoginPage() {
         <div className="flex items-center justify-center">
           <Image 
             src="/icons/logo.png" 
-            alt="Doctar" 
+            alt="DOCONLINE" 
             width={135}
             height={40}
             className="h-10 w-auto cursor-pointer"

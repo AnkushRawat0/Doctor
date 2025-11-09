@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -105,12 +105,12 @@ export default function SignupPage() {
         <div className="max-w-2xl w-full">
           <div className="text-center mb-8">
             <div className="flex items-center justify-center mb-4">
-              <div className="w-12 h-12 bg-[#5f4191] rounded-full flex items-center justify-center mr-3">
+              <div className="w-12 h-12 bg-[#10B981] rounded-full flex items-center justify-center mr-3">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h1 className="text-3xl font-bold text-gray-900">Doctar</h1>
+              <h1 className="text-3xl font-bold text-gray-900">DOCONLINE</h1>
             </div>
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Doctor Registration</h2>
             <p className="text-gray-600">Join our platform as a medical professional</p>
@@ -131,13 +131,13 @@ export default function SignupPage() {
               <div className="space-y-3">
                 <Link 
                   href="/auth"
-                  className="block w-full px-6 py-3 bg-[#5f4191] text-white rounded-lg font-semibold hover:bg-[#4d3374] transition-colors text-center"
+                  className="block w-full px-6 py-3 bg-[#10B981] text-white rounded-lg font-semibold hover:bg-[#059669] transition-colors text-center"
                 >
                   Back to Role Selection
                 </Link>
                 <Link 
                   href="/auth/login"
-                  className="block w-full px-6 py-3 border-2 border-[#5f4191] text-[#5f4191] rounded-lg font-semibold hover:bg-[#5f4191] hover:text-white transition-colors text-center"
+                  className="block w-full px-6 py-3 border-2 border-[#10B981] text-[#10B981] rounded-lg font-semibold hover:bg-[#10B981] hover:text-white transition-colors text-center"
                 >
                   Already have an account? Login
                 </Link>
@@ -155,12 +155,12 @@ export default function SignupPage() {
         {/* Header */}
         <div className="text-center mb-8">
           <div className="flex items-center justify-center mb-4">
-            <div className="w-12 h-12 bg-[#5f4191] rounded-full flex items-center justify-center mr-3">
+            <div className="w-12 h-12 bg-[#10B981] rounded-full flex items-center justify-center mr-3">
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h1 className="text-3xl font-bold text-gray-900">Doctar</h1>
+            <h1 className="text-3xl font-bold text-gray-900">DOCONLINE</h1>
           </div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Create Patient Account</h2>
           <p className="text-gray-600">Join our platform to find the best healthcare services</p>
@@ -185,7 +185,7 @@ export default function SignupPage() {
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                       errors.firstName ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="Enter your first name"
@@ -202,7 +202,7 @@ export default function SignupPage() {
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                       errors.lastName ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="Enter your last name"
@@ -221,7 +221,7 @@ export default function SignupPage() {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                       errors.email ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="Enter your email"
@@ -238,7 +238,7 @@ export default function SignupPage() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                       errors.phone ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="Enter your phone number"
@@ -257,7 +257,7 @@ export default function SignupPage() {
                     name="dateOfBirth"
                     value={formData.dateOfBirth}
                     onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                       errors.dateOfBirth ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -272,7 +272,7 @@ export default function SignupPage() {
                     name="gender"
                     value={formData.gender}
                     onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                       errors.gender ? 'border-red-500' : 'border-gray-300'
                     }`}
                   >
@@ -302,7 +302,7 @@ export default function SignupPage() {
                   value={formData.address}
                   onChange={handleInputChange}
                   rows={3}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                     errors.address ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="Enter your full address"
@@ -320,7 +320,7 @@ export default function SignupPage() {
                     name="city"
                     value={formData.city}
                     onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                       errors.city ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="Enter your city"
@@ -337,7 +337,7 @@ export default function SignupPage() {
                     name="state"
                     value={formData.state}
                     onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                       errors.state ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="Enter your state"
@@ -354,7 +354,7 @@ export default function SignupPage() {
                     name="pincode"
                     value={formData.pincode}
                     onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                       errors.pincode ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="Enter pincode"
@@ -379,7 +379,7 @@ export default function SignupPage() {
                   name="emergencyContact"
                   value={formData.emergencyContact}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981]"
                   placeholder="Emergency contact number"
                 />
               </div>
@@ -393,7 +393,7 @@ export default function SignupPage() {
                   value={formData.medicalHistory}
                   onChange={handleInputChange}
                   rows={3}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981]"
                   placeholder="Any relevant medical history"
                 />
               </div>
@@ -407,7 +407,7 @@ export default function SignupPage() {
                   value={formData.allergies}
                   onChange={handleInputChange}
                   rows={2}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981]"
                   placeholder="Any known allergies"
                 />
               </div>
@@ -429,7 +429,7 @@ export default function SignupPage() {
                     name="password"
                     value={formData.password}
                     onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                       errors.password ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="Create a password"
@@ -446,7 +446,7 @@ export default function SignupPage() {
                     name="confirmPassword"
                     value={formData.confirmPassword}
                     onChange={handleInputChange}
-                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                       errors.confirmPassword ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="Confirm your password"
@@ -467,7 +467,7 @@ export default function SignupPage() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full py-3 bg-[#5f4191] text-white rounded-lg font-semibold hover:bg-[#4d3374] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="w-full py-3 bg-[#10B981] text-white rounded-lg font-semibold hover:bg-[#059669] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 {isLoading ? 'Creating Account...' : 'Create Patient Account'}
               </button>
@@ -478,7 +478,7 @@ export default function SignupPage() {
           <div className="text-center mt-6">
             <p className="text-gray-600">
               Already have an account?{' '}
-              <Link href="/auth/login" className="text-[#5f4191] hover:text-[#4d3374] font-semibold">
+              <Link href="/auth/login" className="text-[#10B981] hover:text-[#059669] font-semibold">
                 Login here
               </Link>
             </p>
