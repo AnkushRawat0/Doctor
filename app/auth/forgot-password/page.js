@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
@@ -51,7 +51,7 @@ export default function ForgotPasswordPage() {
             <div className="flex justify-center mb-6">
               <Image
                 src="/icons/logo.png"
-                alt="Doctar Logo"
+                alt="DOCONLINE Logo"
                 width={200}
                 height={60}
                 className="object-contain"
@@ -83,13 +83,13 @@ export default function ForgotPasswordPage() {
               <div className="space-y-3">
                 <Link 
                   href="/auth/login"
-                  className="block w-full px-6 py-3 bg-[#5f4191] text-white rounded-lg font-semibold hover:bg-[#4d3374] transition-colors text-center"
+                  className="block w-full px-6 py-3 bg-[#10B981] text-white rounded-lg font-semibold hover:bg-[#059669] transition-colors text-center"
                 >
                   Back to Login
                 </Link>
                 <button 
                   onClick={() => setIsSubmitted(false)}
-                  className="block w-full px-6 py-3 border-2 border-[#5f4191] text-[#5f4191] rounded-lg font-semibold hover:bg-[#5f4191] hover:text-white transition-colors"
+                  className="block w-full px-6 py-3 border-2 border-[#10B981] text-[#10B981] rounded-lg font-semibold hover:bg-[#10B981] hover:text-white transition-colors"
                 >
                   Try Different Email
                 </button>
@@ -126,7 +126,7 @@ export default function ForgotPasswordPage() {
           <div className="flex justify-center mb-6">
             <Image
               src="/icons/logo.png"
-              alt="Doctar Logo"
+              alt="DOCONLINE Logo"
               width={200}
               height={60}
               className="object-contain"
@@ -152,7 +152,7 @@ export default function ForgotPasswordPage() {
                   setEmail(e.target.value);
                   setError('');
                 }}
-                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                   error ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="Enter your email address"
@@ -165,7 +165,7 @@ export default function ForgotPasswordPage() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full py-3 bg-[#5f4191] text-white rounded-lg font-semibold hover:bg-[#4d3374] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="w-full py-3 bg-[#10B981] text-white rounded-lg font-semibold hover:bg-[#059669] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 {isLoading ? 'Sending...' : 'Send Reset Instructions'}
               </button>
@@ -176,7 +176,7 @@ export default function ForgotPasswordPage() {
           <div className="text-center mt-6">
             <p className="text-gray-600">
               Remember your password?{' '}
-              <Link href="/auth/login" className="text-[#5f4191] hover:text-[#4d3374] font-semibold">
+              <Link href="/auth/login" className="text-[#10B981] hover:text-[#059669] font-semibold">
                 Sign in here
               </Link>
             </p>
@@ -187,7 +187,7 @@ export default function ForgotPasswordPage() {
         <div className="text-center mt-6">
           <Link 
             href="/"
-            className="text-gray-600 hover:text-[#5f4191] transition-colors"
+            className="text-gray-600 hover:text-[#10B981] transition-colors"
           >
             ← Back to Home
           </Link>

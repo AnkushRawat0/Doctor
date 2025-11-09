@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import Image from 'next/image';
@@ -19,7 +19,7 @@ export default function AuthPage() {
           <div className="flex justify-center mb-6">
             <Image
               src="/icons/logo.png"
-              alt="Doctar Logo"
+              alt="DOCONLINE Logo"
               width={200}
               height={60}
               className="object-contain"
@@ -36,7 +36,7 @@ export default function AuthPage() {
           <div 
             className={`relative bg-white rounded-2xl p-6 border-2 cursor-pointer transition-all duration-300 hover:shadow-lg ${
               selectedRole === 'patient' 
-                ? 'border-[#5f4191] shadow-lg' 
+                ? 'border-[#10B981] shadow-lg' 
                 : 'border-gray-200 hover:border-purple-300'
             }`}
             onClick={() => handleRoleSelect('patient')}
@@ -59,7 +59,7 @@ export default function AuthPage() {
             </div>
             {selectedRole === 'patient' && (
               <div className="absolute top-4 right-4">
-                <div className="w-6 h-6 bg-[#5f4191] rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-[#10B981] rounded-full flex items-center justify-center">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
@@ -72,7 +72,7 @@ export default function AuthPage() {
           <div 
             className={`relative bg-white rounded-2xl p-6 border-2 cursor-pointer transition-all duration-300 hover:shadow-lg ${
               selectedRole === 'doctor' 
-                ? 'border-[#5f4191] shadow-lg' 
+                ? 'border-[#10B981] shadow-lg' 
                 : 'border-gray-200 hover:border-purple-300'
             }`}
             onClick={() => handleRoleSelect('doctor')}
@@ -95,7 +95,7 @@ export default function AuthPage() {
             </div>
             {selectedRole === 'doctor' && (
               <div className="absolute top-4 right-4">
-                <div className="w-6 h-6 bg-[#5f4191] rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-[#10B981] rounded-full flex items-center justify-center">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
@@ -110,13 +110,13 @@ export default function AuthPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={selectedRole === 'patient' ? '/auth/patient-onboarding' : '/auth/doctor-onboarding'}
-              className="w-full sm:w-auto px-8 py-3 bg-[#5f4191] text-white rounded-lg font-semibold hover:bg-[#4d3374] transition-colors text-center"
+              className="w-full sm:w-auto px-8 py-3 bg-[#10B981] text-white rounded-lg font-semibold hover:bg-[#059669] transition-colors text-center"
             >
               Create {selectedRole === 'patient' ? 'Patient' : 'Doctor'} Account
             </Link>
             <Link 
               href="/auth/login"
-              className="w-full sm:w-auto px-8 py-3 border-2 border-[#5f4191] text-[#5f4191] rounded-lg font-semibold hover:bg-[#5f4191] hover:text-white transition-colors text-center"
+              className="w-full sm:w-auto px-8 py-3 border-2 border-[#10B981] text-[#10B981] rounded-lg font-semibold hover:bg-[#10B981] hover:text-white transition-colors text-center"
             >
               Already have an account? Login
             </Link>
@@ -127,7 +127,7 @@ export default function AuthPage() {
         <div className="text-center mt-8">
           <Link 
             href="/"
-            className="text-gray-600 hover:text-[#5f4191] transition-colors"
+            className="text-gray-600 hover:text-[#10B981] transition-colors"
           >
             ← Back to Home
           </Link>

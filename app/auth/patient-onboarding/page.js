@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -294,7 +294,7 @@ export default function PatientOnboardingPage() {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                     errors.name ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="Full name"
@@ -311,7 +311,7 @@ export default function PatientOnboardingPage() {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                     errors.email ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="Example@domain"
@@ -328,7 +328,7 @@ export default function PatientOnboardingPage() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                     errors.phone ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="+91 xxxxx xxxxx"
@@ -345,7 +345,7 @@ export default function PatientOnboardingPage() {
                   name="password"
                   value={formData.password}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                     errors.password ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="********"
@@ -372,7 +372,7 @@ export default function PatientOnboardingPage() {
                   maxLength="1"
                   value={formData.otp[index] || ''}
                   onChange={(e) => handleOTPChange(index, e.target.value)}
-                  className={`w-12 h-12 text-center text-xl font-bold border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                  className={`w-12 h-12 text-center text-xl font-bold border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                     errors.otp ? 'border-red-500' : 'border-gray-300'
                   }`}
                 />
@@ -385,7 +385,7 @@ export default function PatientOnboardingPage() {
                 type="button"
                 onClick={resendOTP}
                 disabled={otpLoading}
-                className="text-[#5f4191] hover:text-[#4d3374] text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                className="text-[#10B981] hover:text-[#059669] text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {otpLoading ? 'Sending...' : 'Resend OTP'}
               </button>
@@ -408,7 +408,7 @@ export default function PatientOnboardingPage() {
                   name="location"
                   value={formData.location}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                     errors.location ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="Eg. Lucknow, Uttar Pradesh"
@@ -424,7 +424,7 @@ export default function PatientOnboardingPage() {
                   name="language"
                   value={formData.language}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191]"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981]"
                 >
                   <option value="English">English</option>
                   <option value="Hindi">Hindi</option>
@@ -455,8 +455,8 @@ export default function PatientOnboardingPage() {
                       onClick={() => setFormData(prev => ({ ...prev, sex: 'Male' }))}
                       className={`w-16 h-16 rounded-full border-2 flex items-center justify-center mb-2 ${
                         formData.sex === 'Male' 
-                          ? 'border-[#5f4191] bg-[#5f4191] text-white' 
-                          : 'border-gray-300 hover:border-[#5f4191]'
+                          ? 'border-[#10B981] bg-[#10B981] text-white' 
+                          : 'border-gray-300 hover:border-[#10B981]'
                       }`}
                     >
                       <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -472,8 +472,8 @@ export default function PatientOnboardingPage() {
                       onClick={() => setFormData(prev => ({ ...prev, sex: 'Female' }))}
                       className={`w-16 h-16 rounded-full border-2 flex items-center justify-center mb-2 ${
                         formData.sex === 'Female' 
-                          ? 'border-[#5f4191] bg-[#5f4191] text-white' 
-                          : 'border-gray-300 hover:border-[#5f4191]'
+                          ? 'border-[#10B981] bg-[#10B981] text-white' 
+                          : 'border-gray-300 hover:border-[#10B981]'
                       }`}
                     >
                       <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -493,7 +493,7 @@ export default function PatientOnboardingPage() {
                   name="dateOfBirth"
                   value={formData.dateOfBirth}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f4191] ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#10B981] ${
                     errors.dateOfBirth ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="DD/MM/YYYY"
@@ -515,7 +515,7 @@ export default function PatientOnboardingPage() {
       <div className="flex items-center justify-between p-4 border-b border-gray-200">
         <div className="flex items-center">
           <div className="w-8 h-4 bg-gray-400 rounded-full mr-2"></div>
-          <span className="text-lg font-semibold text-gray-900">Doctar</span>
+          <span className="text-lg font-semibold text-gray-900">DOCONLINE</span>
         </div>
         <div className="text-sm text-gray-500">
           Step {currentStep} of 4

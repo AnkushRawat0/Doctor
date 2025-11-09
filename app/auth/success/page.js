@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -25,7 +25,7 @@ export default function SuccessPage() {
           <div className="flex justify-center mb-6">
             <Image
               src="/icons/logo.png"
-              alt="Doctar Logo"
+              alt="DOCONLINE Logo"
               width={200}
               height={60}
               className="object-contain"
@@ -54,14 +54,14 @@ export default function SuccessPage() {
         {/* Success Card */}
         <div className="bg-white rounded-2xl shadow-lg p-8">
           <div className="text-center">
-            <div className="w-16 h-16 bg-[#5f4191] rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-[#10B981] rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
             
             <h2 className="text-xl font-semibold text-gray-900 mb-2">
-              Welcome to Doctar!
+              Welcome to DOCONLINE!
             </h2>
             
             <p className="text-gray-600 mb-6">
@@ -79,13 +79,13 @@ export default function SuccessPage() {
                 <>
                   <Link 
                     href="/auth/login"
-                    className="block w-full px-6 py-3 bg-[#5f4191] text-white rounded-lg font-semibold hover:bg-[#4d3374] transition-colors text-center"
+                    className="block w-full px-6 py-3 bg-[#10B981] text-white rounded-lg font-semibold hover:bg-[#059669] transition-colors text-center"
                   >
                     Sign In to Your Account
                   </Link>
                   <Link 
                     href="/"
-                    className="block w-full px-6 py-3 border-2 border-[#5f4191] text-[#5f4191] rounded-lg font-semibold hover:bg-[#5f4191] hover:text-white transition-colors text-center"
+                    className="block w-full px-6 py-3 border-2 border-[#10B981] text-[#10B981] rounded-lg font-semibold hover:bg-[#10B981] hover:text-white transition-colors text-center"
                   >
                     Explore the Platform
                   </Link>
@@ -94,13 +94,13 @@ export default function SuccessPage() {
                 <>
                   <Link 
                     href="/"
-                    className="block w-full px-6 py-3 bg-[#5f4191] text-white rounded-lg font-semibold hover:bg-[#4d3374] transition-colors text-center"
+                    className="block w-full px-6 py-3 bg-[#10B981] text-white rounded-lg font-semibold hover:bg-[#059669] transition-colors text-center"
                   >
                     Go to Dashboard
                   </Link>
                   <Link 
                     href="/auth"
-                    className="block w-full px-6 py-3 border-2 border-[#5f4191] text-[#5f4191] rounded-lg font-semibold hover:bg-[#5f4191] hover:text-white transition-colors text-center"
+                    className="block w-full px-6 py-3 border-2 border-[#10B981] text-[#10B981] rounded-lg font-semibold hover:bg-[#10B981] hover:text-white transition-colors text-center"
                   >
                     Back to Auth
                   </Link>
